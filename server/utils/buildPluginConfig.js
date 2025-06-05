@@ -10,6 +10,9 @@ function buildPluginConfig(strapi, isValueProtected = false) {
     githubToken: isValueProtected
       ? protectedValue(getPluginConfigByKey('githubToken')?.trim())
       : getPluginConfigByKey('githubToken')?.trim(),
+    githubAppID: getPluginConfigByKey('githubAppID')?.trim(),
+    githubAppInstallationID: getPluginConfigByKey('githubInstallationID')?.trim(),
+    githubAppPrivateKey: getPluginConfigByKey('githubAppPrivateKey')?.trim(),
     owner: getPluginConfigByKey('owner')?.trim(),
     repo: getPluginConfigByKey('repo')?.trim(),
     workflowId: getPluginConfigByKey('workflowId'),
